@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card, Col, Container, ListGroup, Row } from "react-bootstrap";
 import d5 from "../../assets/images/d5.jpg";
-//import vett from "../../assets/vett.jpg";
+import vett from "../../assets/images/vett.jpg";
 
 const Home = () => {
   return (
@@ -46,7 +46,7 @@ const Home = () => {
 
         <Col md={6} className="mb-3" >  
           <Card>
-            <Card.Img variant="top" src={d5} alt="About Us" className="hero-image" />
+            <Card.Img variant="top" src={vett} alt="About Us" className="hero-image" />
             <Card.Body>
               <h2 className="text-info">Who we are</h2>
               <Card.Title>
