@@ -1,11 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import BackgroundImageSlider from "../common/BackgroundImageSlider";
+import NavBar from "./NavBar";
 
 const RootLayout = () => {
   return (
     <main>
-        <BackgroundImageSlider/>
+      <NavBar />
+      <BackgroundImageSlider />
       <div>
         <Outlet />
       </div>
