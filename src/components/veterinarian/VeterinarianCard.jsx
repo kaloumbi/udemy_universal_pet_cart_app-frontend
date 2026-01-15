@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const VeterinarianCard = ({ vet }) => {
   return (
-    <Col key={vet.id} className="mb-4 xs={12}" >
+    <Col key={vet.id} className="mb-4 xs={12}">
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
-            <div className="d-flex align-items-center" >
+            <div className="d-flex align-items-center">
               <Link>
                 {vet.photo ? (
                   <Card.Img
@@ -27,25 +27,26 @@ const VeterinarianCard = ({ vet }) => {
             </div>
 
             <div>
-              <Card.Title className="title" >
+              <Card.Title className="title">
                 Dr.{vet.firstName} {vet.lastName}{" "}
               </Card.Title>
               <Card.Title>
                 <h6> {vet.specialization} </h6>
               </Card.Title>
-              <Card.Title className="review rating-stars" >
+              <Card.Title className="review rating-stars">
                 Reviews: Some stars
-                <Link to {""} >Book appointment</Link>
+                <Link to={""}>Book appointment</Link>
               </Card.Title>
             </div>
           </Accordion.Header>
 
           <Accordion.Body>
             <div>
-                <Link to={""} className="link-2" >See what people are saying about</Link> 
-                <span className="margin-letf-space" >Dr.{vet.firstName} </span>
+              <Link to={""} className="link-2">
+                See what people are saying about
+              </Link>
+              <span className="margin-letf-space">Dr.{vet.firstName} </span>
             </div>
-
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
