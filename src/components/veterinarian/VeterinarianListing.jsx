@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import VeterinarianCard from "./VeterinarianCard";
 import { getVeterinarians } from "./VeterinarianService";
 
@@ -11,7 +11,8 @@ const VeterinarianListing = () => {
   useEffect(() => {
     getVeterinarians()
       .then((data) => {
-        setVeterinarians(data);
+        console.log("Données reçues de l'API :", data.data); // <--- AJOUTE CECI
+        setVeterinarians(data.data);
       })
       .catch((error) => {
         setErrorMessage(error.message);

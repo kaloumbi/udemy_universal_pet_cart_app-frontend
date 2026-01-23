@@ -4,12 +4,14 @@ import Home from "./components/home/Home";
 import BackgroundImageSlider from "./components/common/BackgroundImageSlider";
 import { createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
+import VeterinarianListing from "./components/veterinarian/VeterinarianListing";
 
 function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element = {<RootLayout/>} >
       <Route index element = {<Home/>} />
+      <Route path="/doctors" element = {<VeterinarianListing/>} />
     </Route>
   ))
 
