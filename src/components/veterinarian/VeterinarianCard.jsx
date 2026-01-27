@@ -1,6 +1,8 @@
 import React from "react";
 import { Accordion, Card, Col, Placeholder } from "react-bootstrap";
+import placeholder from "../../assets/images/placeholder.jpg";
 import { Link } from "react-router-dom";
+import UserImage from "../common/UserImage";
 
 const VeterinarianCard = ({ vet }) => {
   return (
@@ -10,19 +12,11 @@ const VeterinarianCard = ({ vet }) => {
           <Accordion.Header>
             <div className="d-flex align-items-center">
               <Link>
-                {vet.photo ? (
-                  <Card.Img
-                    src={`data:image/png;base64, ${vet.photo}`}
-                    className="user-image"
-                    alt="User Photo"
-                  />
-                ) : (
-                  <Card.Img
-                    src={Placeholder}
-                    className="user-image"
-                    alt="User Photo"
-                  />
-                )}
+                <UserImage
+                  userId={vet.id}
+                  userPhoto={vet.photo}
+                  placeholder={placeholder}
+                />
               </Link>
             </div>
 
